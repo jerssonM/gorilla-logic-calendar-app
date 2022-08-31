@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar App</title>
+    <link href="http://fonts.cdnfonts.com/css/roboto" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="calendar-container">
+      <div class="calendar">
+        <div class="calendar-header">
+          <p class="calendar-header-title" id="appointment-month"></p>
+          <p class="calendar-header-title" id="appointment-year"></p>
+        </div>
+        <div class="calendar-week-row">
+          <span class="calendar-week-cell">Monday</span>
+          <span class="calendar-week-cell">Tuesday</span>
+          <span class="calendar-week-cell">Wednesday</span>
+          <span class="calendar-week-cell">Thursday</span>
+          <span class="calendar-week-cell">Friday</span>
+          <span class="calendar-week-cell">Saturday</span>
+          <span class="calendar-week-cell">Sunday</span>
+        </div>
+        <div class="calendar-days-container" id="days"></div>
+      </div>
+      <hr class="calendar-divider" />
+      <h5 class="appointment-list-title">Appointments list</h5>
+      <div><ul id="appointment-list"></ul></div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

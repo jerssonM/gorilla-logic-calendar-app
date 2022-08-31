@@ -1,0 +1,159 @@
+@import url("http://fonts.cdnfonts.com/css/roboto");
+
+/* Global vars */
+:root {
+  --bg-primary: #3b82f6;
+  --bg-primary--inactive: #60a5fa;
+  --bg-inactive: #d1d5db;
+  --bg-selected: #0d9488;
+  --bg-delete: #ef4544;
+}
+
+/* Resets */
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body, p {
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* Calendar styles */
+
+.calendar-container {
+  padding: 16px;
+} 
+
+.calendar {
+  width: 100%;
+}
+
+.calendar-header {
+  padding: 16px;
+  background-color: var(--bg-primary);
+}
+
+.calendar-header-title {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin: 4px 0;
+}
+
+.calendar-week-row {
+  display: flex;
+  background-color: white;
+}
+
+.calendar-week-cell {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  flex: 1;
+  padding: 16px;
+}
+
+.calendar-days-container {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto;
+}
+
+.calendar-divider {
+  margin: 16px 0;
+}
+
+.calendar-day-cell {
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  height: 80px;
+  background-color: var(--bg-primary);
+}
+
+.calendar-day-cell--selected {
+  background-color: var(--bg-selected);
+}
+
+.calendar-day-cell--inactive {
+  background-color: var(--bg-primary--inactive);
+  cursor: not-allowed;
+}
+
+.calendar-not-day-cell {
+  background-color: var(--bg-inactive);
+  border-radius: 4px;
+}
+
+/* Appointments styles */
+
+.appointment-list-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.appointment-list-item {
+  background-color: var(--bg-primary);
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.appointment-list-item-date {
+  color: white;
+  font-weight: bold;
+}
+
+.appointment-list-item-description {
+  color: white;
+  text-transform: uppercase;
+}
+
+.appointment-list-button-edit {
+  padding: 8px 0;
+  text-align: center;
+  border-radius: 4px;
+  width: 80px;
+  color: black;
+  background-color: white;
+  margin-right: 16px;
+  text-transform: uppercase;
+}
+
+.appointment-list-button-delete {
+  padding: 8px 0;
+  text-align: center;
+  border-radius: 4px;
+  width: 80px;
+  color: white;
+  background-color: var(--bg-delete);
+  margin-right: 16px;
+  text-transform: uppercase;
+}
